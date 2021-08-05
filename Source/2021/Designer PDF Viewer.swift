@@ -1,7 +1,7 @@
 import Foundation
 
 func designerPdfViewer(h: [Int], word: String) -> Int {
-    let alphabet: [Character] = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    let alphabet: [Character] = Array("abcdefghijklmnopqrstuvwxyz")
     
     var valueDict = [Character: Int]()
     for i in 0...25 { valueDict[alphabet[i]] = h[i] }
