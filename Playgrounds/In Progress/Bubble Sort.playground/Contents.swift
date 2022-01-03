@@ -29,8 +29,8 @@ func countSwaps(a: [Int]) -> Int {
 // MARK: Tests
 // -----------------
 
-let testArrays = [ [1, 2, 3], [3, 2, 1] ]
-let testAnswers = [ 0, 3 ]
+let testArrays = [ [1, 2, 3], [3, 2, 1], [4, 2, 3, 1]]
+let testAnswers = [ 0, 3, 5 ]
 
 for i in 0..<testArrays.count {
 	let input = testArrays[i]
@@ -38,7 +38,7 @@ for i in 0..<testArrays.count {
 	
 	let swapCount = countSwaps(a: input)
 	
-	if (swapCount == answer) { print("---- [PASS] ----") }
-	else { print("---- [FAIL] ----") }
+	if (swapCount == answer) { print("---- [#\(i) PASSED] ----") }
+	else { print("---- [#\(i) FAILED] ----") }
 }
 
