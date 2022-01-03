@@ -3,10 +3,10 @@
 
 ### Ransom Note
 	func checkMagazine(magazine: [String], note: [String]) -> Bool {
-		var matchingWords = magazine.filter { return note.contains($0) }
-			matchingWords = Array(Set(matchingWords)) // Remove Duplicates
+	    var matchingWords = magazine.filter { return note.contains($0) }
+	        matchingWords = Array(Set(matchingWords)) // Remove Duplicates
 
-		return matchingWords.count == note.count
+	    return matchingWords.count == note.count
 	}
 
 
