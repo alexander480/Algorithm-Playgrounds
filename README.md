@@ -1,7 +1,16 @@
 # Algorithm-Playgrounds
 ---
 
-### Caesar Cipher (2021)
+### Ransom Note
+	func checkMagazine(magazine: [String], note: [String]) -> Bool {
+		var matchingWords = magazine.filter { return note.contains($0) }
+			matchingWords = Array(Set(matchingWords)) // Remove Duplicates
+
+		return matchingWords.count == note.count
+	}
+
+
+### Caesar Cipher
 	func createDictionary(rotations: Int) -> [Character: Character] {
 	    let alphabet: [Character] = Array("abcdefghijklmnopqrstuvwxyz")
 	    
@@ -41,7 +50,7 @@
 	    return result
 	}
 
-### Subarray Division (2021)
+### Subarray Division
 	func birthday(s: [Int], d: Int, m: Int) -> Int {
 	    var matchCount = 0
 	    
@@ -59,7 +68,7 @@
 	    return matchCount
 	}
 
-### Counting Valleys (2021)
+### Counting Valleys
 	func countingValleys(steps: Int, path: String) -> Int {
 	    var currentElevation = 0
 	    var valleyCount = 0
@@ -84,7 +93,7 @@
 	    return valleyCount
 	}
 
-### Between Two Sets (2021)
+### Between Two Sets
     func getTotalX(a: [Int], b: [Int]) -> Int {
 	    var matchCount = 0
 	    
@@ -108,7 +117,7 @@
 	    return matchCount
 	}
 
-### Bill Division (2021)
+### Bill Division
 	func bonAppetit(bill: [Int], k: Int, b: Int) -> String {
 	    let billTotal = bill.reduce(0, +)
 	    let annaShare = ((billTotal - bill[k]) / 2)
@@ -117,7 +126,7 @@
 	    else { return "\(b - annaShare)" }
 	}
 
-### Designer PDF Viewer (2021)
+### Designer PDF Viewer
 	func designerPdfViewer(h: [Int], word: String) -> Int {
 	    let alphabet: [Character] = Array("abcdefghijklmnopqrstuvwxyz")
 	    
@@ -134,7 +143,7 @@
 	    return boxArea
 	}
 
-### ApplesAndOranges (2019)
+### ApplesAndOranges
 	func countApplesAndOranges(s: Int, t: Int, a: Int, b: Int, apples: [Int], oranges: [Int]) -> Void {
 	    let houseRange = s...t
 	    let aTree = a
@@ -157,7 +166,7 @@
 	    print(orangesOnHouse)
 	}
 
-### Diagonal Difference (2019)
+### Diagonal Difference
 	func diagonalDifference(arr: [[Int]]) -> Int {
 	    let arrLength = arr[0].count - 1
 	    
@@ -191,7 +200,7 @@
 	    return result
 	}
 
-### Grading Students (2019)
+### Grading Students
 	func gradingStudents(grades: [Int]) -> [Int] {
 	    var rounded = [Int]()
 	    
@@ -208,7 +217,7 @@
 	    return rounded
 	}
 
-### Kangaroo (2019)
+### Kangaroo
 	func kangaroo(x1: Int, v1: Int, x2: Int, v2: Int) -> String {
 	    var oneStart = x1
 	    let oneSpeed = v1
@@ -232,7 +241,7 @@
 	    return "NO"
 	}
 
-### Mini-Max Sum (2019)
+### Mini-Max Sum
 	func miniMaxSum(arr: [Int]) -> Void {
 	    let noFirst = arr[1] + arr[2] + arr[3] + arr[4]
 	    let noSecond = arr[0] + arr[2] + arr[3] + arr[4]
@@ -247,7 +256,7 @@
 	}
 
 
-### Plus Minus (2019)
+### Plus Minus
 	func plusMinus(arr: [Int]) -> Void {
 	    let length = arr.count
 	    
@@ -270,7 +279,7 @@
 	    print(fracZer)
 	}
 
-### Sock Merchant (2019)
+### Sock Merchant
 	func sockMerchant(n: Int, ar: [Int]) -> Int {
 	    let mapped = ar.map { ($0, 1) }
 	    let dictionary = Dictionary(mapped, uniquingKeysWith: +).values
@@ -286,7 +295,7 @@
 	    return pairs
 	}
 
-### Staircase (2019)
+### Staircase
 	func staircase(n: Int) -> Void {
 	    var stairs = [String]()
 	    
@@ -314,7 +323,7 @@
 	}
 
 
-### Time Conversion (2019)
+### Time Conversion
 	func convertTimeToIntArray(String: String) -> [Int] {
 	    var intArray = [Int]()
 	    
