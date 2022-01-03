@@ -2,7 +2,26 @@
 ---
 
 ### Bubble Sort
+	func countSwaps(a: [Int]) -> Int {
+	    var arr = a
+	    var swapCount = 0
 
+	    for x in 0..<arr.count {
+		    if (x < arr[x]) {
+
+			    for y in 0..<arr.count - 1 {
+				    if (arr[y] > arr[y + 1]) {
+					
+					    arr.swapAt(y, y + 1)
+					    swapCount += 1
+				    }
+			    }
+			
+		    }
+	    }
+
+	    return swapCount
+	}
 
 ### Ransom Note
 	func checkMagazine(magazine: [String], note: [String]) -> Bool {
