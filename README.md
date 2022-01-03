@@ -28,7 +28,6 @@
 	    return matchingWords.count == note.count
 	}
 
-
 ### Caesar Cipher
 	func createDictionary(rotations: Int) -> [Character: Character] {
 	    let alphabet: [Character] = Array("abcdefghijklmnopqrstuvwxyz")
